@@ -91,8 +91,10 @@ else:
 
 version = 2
 try:
-    key1 = str(api_keys[0])[2:21]
-    key2 = str(api_keys[1])[2:12]
+    key1 = str(api_keys[0])[2:]
+    key1 = key1[:-2]
+    key2 = str(api_keys[1])[2:]
+    key2 = key2[:-2]
 except:
     print "[*] Error with reading API keys from api_keys.csv. Check that the API_key is in A1, and the secret pin is in A2. Quitting..."
     exit()
